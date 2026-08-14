@@ -1,0 +1,416 @@
+/* === Base Reset & Layout === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 11pt;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #2d2d2d;
+  background-color: #ffffff;
+  line-height: 1.5;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Single-column A4 layout, centered */
+#cv-root {
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 10pt;
+  }
+
+  #cv-root {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .cv-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .header-photo img {
+    width: 80px;
+  }
+
+  h1 {
+    font-size: 18pt;
+  }
+
+  h2 {
+    font-size: 14pt;
+  }
+
+  .skill-tags {
+    gap: 0.3rem;
+  }
+}
+
+/* === Typography === */
+h1 {
+  font-size: 24pt;
+  color: #1a5276;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 16pt;
+  color: #1a5276;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 13pt;
+  color: #1a5276;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+a {
+  color: #1a5276;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === Section & Entry Spacing === */
+section {
+  margin-bottom: 1.5rem;
+}
+
+article {
+  margin-bottom: 0.75rem;
+}
+
+/* === Header / Contact === */
+.cv-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #1a5276;
+}
+
+.header-photo {
+  flex-shrink: 0;
+}
+
+.header-photo img {
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
+  width: 100px;
+  height: auto;
+}
+
+.header-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.header-title {
+  font-size: 13pt;
+  color: #2d2d2d;
+  margin-top: 0.1rem;
+  margin-bottom: 0.4rem;
+  font-weight: 400;
+}
+
+.header-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.header-contact-item svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: #2d2d2d;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.header-contact-item a {
+  font-size: 0.9rem;
+}
+
+/* === Professional Summary === */
+.summary-section p {
+  line-height: 1.6;
+}
+
+/* === Work Experience === */
+.work-entry {
+  margin-bottom: 0.75rem;
+}
+
+.work-entry .entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.work-entry .entry-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.work-entry ul {
+  margin-top: 0.35rem;
+  padding-left: 1.25rem;
+}
+
+.work-entry li {
+  margin-bottom: 0.2rem;
+  line-height: 1.5;
+}
+
+/* === Education === */
+.edu-entry {
+  margin-bottom: 0.75rem;
+}
+
+.edu-entry .entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.edu-entry .entry-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.edu-entry .edu-description {
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  color: #555;
+}
+
+/* === Technical Skills === */
+.skills-category {
+  margin-bottom: 0.75rem;
+}
+
+.skills-category h3 {
+  margin-bottom: 0.35rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.4rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  border: 1.5px solid #1a5276;
+  color: #1a5276;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+}
+
+.skill-tag-legacy {
+  display: inline-block;
+  border: 1px solid #1a5276;
+  color: #1a5276;
+  padding: 0.15rem 0.5rem;
+  padding-top: calc(0.15rem + 2px);
+  border-radius: 3px;
+  font-size: 0.57rem;
+}
+
+/* === Projects === */
+.project-entry {
+  margin-bottom: 0.75rem;
+}
+
+.project-entry .project-type {
+  font-size: 0.8rem;
+  color: #555;
+  text-transform: capitalize;
+}
+
+.project-entry .project-tech {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.2rem;
+}
+
+/* === Certifications === */
+.cert-entry {
+  margin-bottom: 0.75rem;
+}
+
+.cert-entry .cert-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Expired certification styles */
+.cert-entry.expired {
+  opacity: 0.6;
+  color: #888;
+}
+
+.cert-entry.expired h3 {
+  color: #888;
+}
+
+.expired-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #888;
+  border: 1px solid #888;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+/* === Languages === */
+.language-entry {
+  display: inline-block;
+  margin-right: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.language-entry .proficiency {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* === Achievements === */
+.achievement-entry {
+  margin-bottom: 0.75rem;
+}
+
+.achievement-entry .achievement-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* === References === */
+.reference-entry {
+  margin-bottom: 0.5rem;
+}
+
+.references-note {
+  font-style: italic;
+  color: #555;
+}
+
+/* === Driver's Licence === */
+.drivers-licence-section {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.drivers-licence-section h2 {
+  font-size: 13pt;
+}
+
+/* === Validation Indicators === */
+.validation-warning {
+  border: 2px dashed orange;
+  padding: 0.5rem;
+  border-radius: 4px;
+  position: relative;
+}
+
+.validation-warning::before {
+  content: '\26A0';
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  font-size: 1.1rem;
+  color: orange;
+}
+
+.placeholder-text {
+  color: orange;
+  font-style: italic;
+}
+
+/* === Error Banner === */
+#error-banner {
+  max-width: 210mm;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  background-color: #fef3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  color: #856404;
+  font-family: 'Inter', sans-serif;
+}
+
+/* === Skip Link (Accessibility) === */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #1a5276;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  font-size: 0.85rem;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* === Footer === */
+.cv-footer {
+  max-width: 210mm;
+  margin: 2rem auto 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.7rem;
+  color: #999;
+  text-align: center;
+}
+
+/* === Print-only footer (hidden on screen) === */
+.print-footer {
+  display: none;
+}

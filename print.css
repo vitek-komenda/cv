@@ -1,0 +1,129 @@
+/* Print-specific overrides for CV rendering */
+/* Requirements: 14.1, 14.2, 14.3, 14.4 */
+
+@page {
+  size: A4;
+  margin: 15mm;
+}
+
+/* Remove background colours, keep text colour */
+* {
+  background: transparent !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Reveal URLs after hyperlinks for printed copies */
+a[href]::after {
+  content: " (" attr(href) ")";
+  font-size: 0.85em;
+  word-break: break-all;
+}
+
+/* Don't reveal URL for mailto links (email is already visible) */
+a[href^="mailto:"]::after {
+  content: "";
+}
+
+/* Avoid breaking work or education entries across pages */
+.work-entry,
+.edu-entry {
+  break-inside: avoid;
+}
+
+/* Proper text flow across pages */
+p, li {
+  orphans: 2;
+  widows: 2;
+}
+
+/* Hide error banner and interactive controls */
+#error-banner,
+.header-photo,
+.cv-footer,
+.skip-link,
+button,
+input,
+select,
+textarea,
+nav,
+[role="navigation"] {
+  display: none !important;
+}
+
+/* === Skill tags render as rounded-rectangle labels in print === */
+/* The `*` reset above and browsers' default "don't print backgrounds"
+   behaviour flatten the tags. Force borders + spacing so every skill
+   (in all sections) prints as a distinct label instead of merging. */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.skill-tag,
+.skill-tag-legacy {
+  display: inline-block;
+  border: 1px solid #1a5276 !important;
+  border-radius: 3px !important;
+  padding: 0.1rem 0.4rem !important;
+  margin: 0 0.3rem 0.3rem 0;
+  color: #1a5276 !important;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  break-inside: avoid;
+}
+
+.skill-tag-legacy {
+  font-size: 0.57rem;
+  padding-top: 0.1rem !important;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Languages render as rounded-rectangle labels in print === */
+/* Same look and height as skill tags: matching font-size, padding and radius. */
+.languages-list {
+  line-height: 1.8;
+}
+
+.language-entry {
+  display: inline-block !important;
+  border: 1px solid #1a5276 !important;
+  border-radius: 3px !important;
+  padding: 0.1rem 0.4rem !important;
+  margin: 0 0.3rem 0.3rem 0 !important;
+  color: #1a5276 !important;
+  font-size: 0.85rem !important;
+  white-space: nowrap;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  break-inside: avoid;
+}
+
+.language-entry .proficiency {
+  color: #1a5276 !important;
+  font-size: 0.85rem !important;
+}
+
+/* === Print-only footer with live website URL === */
+.print-footer {
+  display: block !important;
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #999;
+  font-size: 0.75rem;
+  color: #555;
+  text-align: center;
+}
+
+.print-footer a {
+  color: #1a5276;
+}
+
+/* URL text is already shown, so don't append it again via ::after */
+.print-footer a[href]::after {
+  content: "";
+}
