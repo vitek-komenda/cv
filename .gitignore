@@ -1,0 +1,4 @@
+.vscode/
+
+# Application-specific CV variants (name employers; keep out of the public repo)
+variants/

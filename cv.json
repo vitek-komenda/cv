@@ -1,0 +1,207 @@
+{
+  "header": {
+    "fullName": "Vít Komenda",
+    "title": "Senior Full-Stack Software Engineer",
+    "email": "vitek.komenda@email.cz",
+    "phone": "",
+    "city": "Prague",
+    "country": "Czech Republic",
+    "linkedIn": "",
+    "github": "",
+    "website": "",
+    "photo": "assets/cv-foto-4.png"
+  },
+  "professionalSummary": "Senior full-stack software engineer working mainly in TypeScript, JavaScript, React and RxJS. Delivered a shared library of tested, reusable UI components for other development teams, including views handling 100,000+ items, and automated security scanning of about 70 build artifacts. Backend experience in C#/.NET and Java/Spring; uses AI coding assistants (Kiro, Claude Code) in daily development.",
+  "workExperience": [
+    {
+      "jobTitle": "Senior Software Engineer",
+      "company": "Infor (Česká republika) s.r.o.",
+      "startDate": "2022-02",
+      "endDate": "2026-08",
+      "location": "Prague, Czech Republic",
+      "bullets": [
+        "Built a shared library of reusable React components, published as npm packages used by other development teams and released every ~2 weeks, plus on demand for urgent fixes",
+        "Engineered UI components for 100,000+ items using react-window virtualization, memory optimisation and lazily fetched trees",
+        "Tested components with Cypress component tests, unit tests and RxJS marble tests",
+        "Worked on an Office add-in taskpane product using the Office.js API",
+        "Reviewed backend code and fixed bugs alongside frontend work"
+      ]
+    },
+    {
+      "jobTitle": "Software Engineer",
+      "company": "Infor (Česká republika) s.r.o.",
+      "startDate": "2006-03",
+      "endDate": "2022-01",
+      "location": "Prague, Czech Republic",
+      "bullets": [
+        "Replaced a manual security scan (run at least monthly) with a Jenkins and Veracode pipeline covering about 25 Node packages and 45 C#, C++ and C++/CLI DLLs; human action only for yearly key rotation",
+        "Contributed to a large service-side C# refactoring to support a service-oriented architecture (SOA)",
+        "Built PDF, PPTX and image exporters in a backend service using the PdfSharp library",
+        "Spent 2 years on a server-side reporting service built with Java, JNI (Java Native Interface), JACE, and the Spring Framework"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "institution": "Institute of Chemical Technology, Prague",
+      "graduationYear": 2009,
+      "fieldOfStudy": "Materials Engineering",
+      "grade": "",
+      "description": "Thesis focused on signal processing and neural networks"
+    },
+    {
+      "degree": "Ing.",
+      "institution": "Institute of Chemical Technology, Prague",
+      "graduationYear": 2002,
+      "fieldOfStudy": "Materials Engineering",
+      "grade": "",
+      "description": "Thesis focused on long-term data acquisition and analysis for evaluating the stability of semiconductor gas sensors"
+    }
+  ],
+  "technicalSkills": [
+    {
+      "category": "Programming Languages",
+      "skills": [
+        "TypeScript",
+        "JavaScript",
+        "C#",
+        "C++",
+        "C++/CLI",
+        "C",
+        "Java",
+        "Kotlin",
+        "Python (basics)"
+      ]
+    },
+    {
+      "category": "Frameworks & Libraries",
+      "skills": [
+        "React",
+        "Redux",
+        "RxJS",
+        ".NET",
+        "Office.js",
+        "Spring Boot"
+      ]
+    },
+    {
+      "category": "Databases",
+      "skills": [
+        "MS SQL Server",
+        "SQL",
+        "OLAP (MDX)"
+      ]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "skills": [
+        "Jenkins",
+        "GitLab CI/CD",
+        "GitHub"
+      ]
+    },
+    {
+      "category": "Tools & Practices",
+      "skills": [
+        "Git",
+        "Agile/Scrum",
+        "TDD",
+        "Code Review",
+        "CI/CD",
+        "REST API Design",
+        "Jira",
+        "Docker",
+        "Linux (Bash)",
+        "Node.js",
+        "npm",
+        "Webpack",
+        "Svelte",
+        "Postman",
+        "DBeaver"
+      ],
+      "obsoleteSkills": [
+        "SVN"
+      ]
+    },
+    {
+      "category": "IDE Tools",
+      "skills": [
+        "VSCode",
+        "MS Visual Studio",
+        "IntelliJ IDEA",
+        "Kiro",
+        "Claude Code"
+      ],
+      "obsoleteSkills": [
+        "Eclipse"
+      ]
+    },
+    {
+      "category": "Test Tools",
+      "skills": [
+        "Cypress (E2E + Component)",
+        "Playwright",
+        "RxJS Marble Testing",
+        "xUnit.net",
+        "Moq",
+        "JUnit"
+      ],
+      "obsoleteSkills": [
+        "Selenium"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "",
+      "description": "",
+      "technologies": [],
+      "url": "",
+      "type": "personal"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "",
+      "issuer": "",
+      "year": null,
+      "expiryYear": null,
+      "credentialId": "",
+      "verificationUrl": ""
+    }
+  ],
+  "languages": [
+    {
+      "name": "Czech",
+      "proficiency": "Native"
+    },
+    {
+      "name": "English",
+      "proficiency": "Fluent"
+    },
+    {
+      "name": "Deutsch",
+      "proficiency": "Anfänger mit Vorkenntnissen"
+    },
+    {
+      "name": "Español",
+      "proficiency": "Principiante avanzado"
+    }
+  ],
+  "achievements": [
+    {
+      "name": "",
+      "organisation": "",
+      "year": null,
+      "impact": ""
+    }
+  ],
+  "references": {
+    "mode": "",
+    "entries": []
+  },
+  "driversLicense": {
+    "category": "B"
+  }
+}
